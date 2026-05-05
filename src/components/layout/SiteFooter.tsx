@@ -3,9 +3,9 @@ import { CONTACT, SERVICES } from "@/lib/constants";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-navy text-white">
-      <div className="container-site py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-12">
+    <footer className="bg-navy text-white border-t border-white/5">
+      <div className="container-site py-12 md:py-16">
+        <div className="grid gap-8 md:grid-cols-12">
           {/* Column 1: Brand */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 font-heading font-bold text-xl mb-6">
@@ -92,9 +92,9 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 md:mt-20 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <div className="mt-12 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© {new Date().getFullYear()} PC Servis Zagreb. Sva prava pridržana.</p>
-          <p>Obrt za IT usluge</p>
+          <p>Lokalna IT pomoć u Zagrebu</p>
         </div>
       </div>
 

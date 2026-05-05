@@ -25,7 +25,7 @@ export function SiteHeader() {
         scrolled ? "shadow-sm border-border" : "border-transparent"
       )}
     >
-      <div className="container-site flex h-16 items-center justify-between md:h-18">
+      <div className="container-site flex h-16 items-center justify-between md:h-[4.5rem]">
         {/* Logo */}
         <Link
           href="/"
@@ -51,8 +51,8 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              buttonVariants({ size: "sm" }),
-              "ml-3 bg-green hover:bg-green-dark text-white"
+              buttonVariants({ size: "sm", variant: "outline" }),
+              "ml-3 border-green/20 bg-green/5 text-green-dark hover:bg-green hover:text-white transition-colors"
             )}
           >
             WhatsApp
@@ -110,14 +110,14 @@ export function SiteHeader() {
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants(),
-                    "w-full bg-green hover:bg-green-dark text-white"
+                    "w-full bg-green hover:bg-green-dark text-white h-12 text-base"
                   )}
                 >
                   WhatsApp upit
                 </a>
                 <a
                   href={CONTACT.phoneHref}
-                  className={cn(buttonVariants({ variant: "outline" }), "w-full")}
+                  className={cn(buttonVariants({ variant: "outline" }), "w-full h-12 text-base")}
                 >
                   Nazovi: {CONTACT.phone}
                 </a>

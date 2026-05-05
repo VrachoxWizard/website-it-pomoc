@@ -1,7 +1,7 @@
 import { Search, Zap, Settings, HeadphonesIcon, Info } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { PRICING, CONTACT } from "@/lib/constants";
+import { PRICING } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const PRICING_ICONS = [Search, Zap, Settings, HeadphonesIcon];
@@ -23,13 +23,13 @@ export function PricingSection() {
           {PRICING.map((item, i) => {
             const Icon = PRICING_ICONS[i];
             return (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
+              <AnimatedSection key={item.title}>
                 <div
                   className={cn(
-                    "relative flex flex-col rounded-3xl border p-8 transition-all duration-300",
+                    "relative flex flex-col rounded-2xl border p-8 transition-colors duration-300",
                     item.highlighted
                       ? "border-navy bg-navy text-white shadow-2xl shadow-navy/20 lg:-mt-4 lg:mb-4 py-10"
-                      : "border-border/60 bg-white hover:border-navy/20"
+                      : "border-border/60 bg-surface hover:border-navy/20 shadow-sm"
                   )}
                 >
                   {item.highlighted && (
@@ -72,33 +72,24 @@ export function PricingSection() {
                     )}
                   </div>
 
-                  <p className={cn("text-sm leading-relaxed mb-8 flex-1", item.highlighted ? "text-white/80" : "text-slate-600")}>
+                  <p className={cn("text-sm leading-relaxed mb-4 flex-1", item.highlighted ? "text-white/80" : "text-slate-600")}>
                     {item.description}
                   </p>
-
-                  <a
-                    href={CONTACT.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({
-                        variant: item.highlighted ? "default" : "outline",
-                      }),
-                      "w-full font-bold justify-center",
-                      item.highlighted 
-                        ? "bg-[#25D366] hover:bg-[#128C7E] text-white border-none py-6 text-base" 
-                        : "border border-border text-navy hover:bg-slate-50 py-5"
-                    )}
-                  >
-                    Kontaktiraj
-                  </a>
                 </div>
               </AnimatedSection>
             );
           })}
         </div>
 
-        <AnimatedSection delay={0.4}>
+        <AnimatedSection>
+          <div className="mt-12 text-center">
+            <a href="#kontakt" className={cn(buttonVariants({ size: "lg" }), "bg-navy hover:bg-navy-light text-white font-bold px-10 py-6 rounded-xl")}>
+              Zatraži točnu cijenu za svoj problem
+            </a>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
           <div className="mt-16 mx-auto max-w-3xl rounded-2xl bg-sand p-6 flex flex-col sm:flex-row items-center sm:items-start gap-4 border border-border/50">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-sm">
               <Info className="h-5 w-5" />

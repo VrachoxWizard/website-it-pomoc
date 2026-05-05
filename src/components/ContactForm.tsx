@@ -64,36 +64,10 @@ export function ContactForm() {
 
   return (
     <AnimatedSection>
-      <div className="rounded-3xl border border-border/60 bg-white p-6 shadow-xl shadow-navy/5 md:p-10 relative overflow-hidden">
-        {/* WhatsApp Banner */}
-        <div className="mb-8 rounded-2xl bg-green/10 p-5 border border-green/20">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <h4 className="flex items-center gap-2 text-base font-bold text-green-dark mb-1">
-                <MessageCircle className="h-5 w-5" />
-                Najbrže je poslati WhatsApp poruku
-              </h4>
-              <p className="text-sm text-green-dark/80">
-                Odgovorim obično unutar 1 sata s jasnom procjenom.
-              </p>
-            </div>
-            <a
-              href={CONTACT.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                buttonVariants(),
-                "bg-green hover:bg-green-dark text-white font-bold whitespace-nowrap"
-              )}
-            >
-              Pošalji WhatsApp
-            </a>
-          </div>
-        </div>
-
+      <div className="relative overflow-hidden">
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className="mb-8 border-b border-border/50 pb-6">
-            <h3 className="text-2xl font-extrabold text-navy mb-2">Ili pošaljite upit ovdje</h3>
+            <h3 className="text-2xl font-extrabold text-navy mb-2">Pošaljite upit ovdje</h3>
             <p className="text-base text-muted-foreground">
               Ispunite obrazac i otvorit će se vaša email aplikacija s pripremljenom porukom.
             </p>
@@ -122,7 +96,7 @@ export function ContactForm() {
               <Textarea id="cf-message" rows={5} placeholder="Napišite ukratko što ne radi, kada je počelo i koji uređaj koristite..." {...register("message")} className="text-base resize-y" />
               <p className="mt-2 text-sm text-muted-foreground">Napišite ukratko što ne radi, kada je počelo i koji uređaj koristite.</p>
             </div>
-            <Button type="submit" disabled={isSubmitting} className="w-full bg-navy hover:bg-navy-light text-white font-bold h-14 text-lg rounded-xl mt-4 transition-all hover:-translate-y-1">
+            <Button type="submit" disabled={isSubmitting} className="w-full bg-navy hover:bg-navy-light text-white font-bold h-14 text-lg rounded-xl mt-4 transition-colors">
               <Send className="mr-2 h-5 w-5" />Pripremi poruku za slanje
             </Button>
             <p className="text-center text-sm text-muted-foreground mt-4">Vaši podaci se ne spremaju. Ovo samo priprema email poruku.</p>

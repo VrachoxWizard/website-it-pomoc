@@ -7,7 +7,7 @@ const TRUST_ICONS = [MapPin, Handshake, MessageCircle, ShieldCheck];
 
 export function TrustSection() {
   return (
-    <section className="section-padding bg-sand relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="container-site">
         <AnimatedSection>
           <div className="text-center mb-16 md:mb-20">
@@ -22,17 +22,17 @@ export function TrustSection() {
           {/* Left: Personal Panel */}
           <div className="lg:col-span-5">
             <AnimatedSection>
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-2xl border border-white/50 bg-white">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl shadow-2xl border border-white/50 bg-white">
                 <Image 
                   src="/images/trust.png" 
                   alt="IT technician portrait" 
                   fill 
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <p className="font-heading text-2xl font-bold mb-2">Mate Vukušić</p>
-                  <p className="text-white/80">Vaš lokalni IT stručnjak</p>
+                  <p className="text-white/90">Vaš lokalni IT stručnjak</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -44,15 +44,15 @@ export function TrustSection() {
               {TRUST_SIGNALS.map((signal, i) => {
                 const Icon = TRUST_ICONS[i] || ShieldCheck;
                 return (
-                  <AnimatedSection key={signal.title} delay={i * 0.1}>
-                    <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 h-full shadow-xl shadow-navy/5 border-0 hover:-translate-y-1 hover:shadow-2xl hover:shadow-navy/10 transition-all">
-                      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5 text-navy">
-                        <Icon className="h-7 w-7" />
+                  <AnimatedSection key={signal.title}>
+                    <div className="bg-surface rounded-2xl p-6 h-full shadow-sm border border-border/50 transition-colors hover:border-navy/10">
+                      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-navy/5 text-navy">
+                        <Icon className="h-5 w-5" />
                       </div>
-                      <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                      <h3 className="font-heading text-lg font-bold text-navy mb-2">
                         {signal.title}
                       </h3>
-                      <p className="text-base leading-relaxed text-slate-600">
+                      <p className="text-[0.95rem] leading-[1.6] text-slate-600">
                         {signal.description}
                       </p>
                     </div>

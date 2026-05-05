@@ -16,9 +16,9 @@ export function MobileStickyBar() {
         </a>
         <a
           href={CONTACT.phoneHref}
-          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-navy py-3.5 text-sm font-bold text-white transition-colors hover:bg-navy-light active:scale-[0.98]"
+          className="flex flex-[0.7] items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-white py-3.5 text-sm font-bold text-navy transition-colors hover:bg-slate-50 active:scale-[0.98]"
         >
-          <Phone className="h-5 w-5" />
+          <Phone className="h-5 w-5 text-slate-400" />
           Nazovi
         </a>
       </div>

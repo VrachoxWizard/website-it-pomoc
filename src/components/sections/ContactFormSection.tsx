@@ -11,9 +11,9 @@ export function ContactFormSection() {
       <div className="container-site">
         <AnimatedSection>
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="heading-section">Kako želite stupiti u kontakt?</h2>
+            <h2 className="heading-section">Kontakt</h2>
             <p className="mt-4 mx-auto max-w-2xl text-body">
-              Za najbrži odgovor preporučujem WhatsApp. Ako imate detaljniji upit, koristite obrazac.
+              WhatsApp za brz odgovor. Obrazac za detaljniji upit.
             </p>
           </div>
         </AnimatedSection>
@@ -21,18 +21,15 @@ export function ContactFormSection() {
         <div className="grid gap-12 lg:grid-cols-12 max-w-6xl mx-auto">
           {/* Primary: WhatsApp Block */}
           <div className="lg:col-span-5">
-            <AnimatedSection delay={0.1} className="h-full">
-              <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 to-navy rounded-3xl p-8 md:p-12 flex flex-col justify-center h-full text-center sm:text-left text-white shadow-2xl shadow-navy/20 border-0">
-                {/* Decorative glow */}
-                <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-green/20 blur-[60px] pointer-events-none"></div>
-                
-                <div className="relative z-10 mx-auto sm:mx-0 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 shadow-sm mb-8 text-green backdrop-blur-md">
-                  <MessageCircle className="h-10 w-10" />
+            <AnimatedSection className="h-full">
+              <div className="relative overflow-hidden bg-sand rounded-2xl p-8 md:p-12 flex flex-col justify-center h-full text-center sm:text-left border border-border/50 shadow-sm">
+                <div className="mx-auto sm:mx-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-green/10 text-green-dark mb-8">
+                  <MessageCircle className="h-8 w-8" />
                 </div>
-                <h3 className="relative z-10 font-heading text-3xl font-bold text-white mb-4">
+                <h3 className="font-heading text-3xl font-bold text-navy mb-4">
                   Najbrži put do rješenja
                 </h3>
-                <p className="relative z-10 text-lg text-slate-300 mb-8 leading-relaxed">
+                <p className="text-lg text-slate-600 mb-8 leading-[1.6]">
                   Pošaljite mi sliku problema ili kratak opis na WhatsApp. Odgovaram u pravilu unutar sat vremena.
                 </p>
                 <a
@@ -41,10 +38,10 @@ export function ContactFormSection() {
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "relative z-10 bg-[#25D366] hover:bg-[#128C7E] text-white text-lg font-bold px-8 py-7 rounded-xl shadow-lg transition-transform hover:-translate-y-1 w-full sm:w-auto flex justify-center border-none"
+                    "bg-[#25D366] hover:bg-[#128C7E] text-white text-lg font-bold px-8 py-6 rounded-xl shadow-sm transition-colors w-full sm:w-auto flex justify-center border-none"
                   )}
                 >
-                  <MessageCircle className="mr-2.5 h-6 w-6" />
+                  <MessageCircle className="mr-2.5 h-5 w-5" />
                   Započni razgovor
                 </a>
               </div>
@@ -53,8 +50,8 @@ export function ContactFormSection() {
 
           {/* Secondary: Standard Form */}
           <div className="lg:col-span-7">
-            <AnimatedSection delay={0.2} className="h-full">
-              <div className="bg-white rounded-3xl p-8 md:p-12 border-0 shadow-2xl shadow-navy/5 h-full">
+            <AnimatedSection delay={0.1} className="h-full">
+              <div className="bg-surface rounded-2xl p-8 md:p-12 border border-border/50 shadow-sm h-full">
                 <div className="flex items-center gap-3 mb-8 pb-6 border-b border-slate-100">
                   <Mail className="h-6 w-6 text-slate-400" />
                   <h3 className="font-heading text-xl font-bold text-navy">

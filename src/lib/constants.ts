@@ -147,26 +147,26 @@ export const PRICING: PricingItem[] = [
     title: "Osnovna dijagnostika",
     price: "od 20€",
     description:
-      "Provjera stanja računala, identificacija problema i preporuka rješenja.",
+      "Pregled uređaja, pronalazak uzroka problema i preporuka što dalje.",
   },
   {
-    title: "Optimizacija računala",
+    title: "Čišćenje i ubrzavanje",
     price: "od 35€",
     description:
-      "Čišćenje sustava, uklanjanje nepotrebnih programa, ubrzavanje pokretanja.",
+      "Čišćenje od virusa, uklanjanje nepotrebnih programa i ubrzavanje rada.",
     highlighted: true,
   },
   {
-    title: "Instalacija / podešavanje",
+    title: "Instalacija i podešavanje",
     price: "od 25€",
     description:
-      "Instalacija Windowsa, programa, drivera ili podešavanje uređaja.",
+      "Instalacija Windowsa, korisnih programa ili podešavanje novog uređaja.",
   },
   {
-    title: "Individualna pomoć",
+    title: "Ostala IT pomoć",
     price: "po dogovoru",
     description:
-      "Složeniji problemi, višesatni rad ili specifični zahtjevi — cijena po dogovoru.",
+      "Spašavanje podataka, rješavanje problema s mrežom ili printerom — cijena se dogovara prije rada.",
   },
 ];
 
@@ -188,17 +188,17 @@ export const TRUST_SIGNALS: TrustSignal[] = [
   {
     emoji: "🤝",
     title: "Jasan dogovor prije rada",
-    description: "Uvijek dogovaramo opseg i cijenu unaprijed. Nema neugodnih iznenađenja ni skrivenih troškova.",
+    description: "Cijena se dogovara prije rada. Prvo procjena, zatim dogovor. Bez skrivenih troškova.",
   },
   {
     emoji: "💬",
     title: "Bez kompliciranja",
-    description: "Javite se, objasnite problem, dogovorimo realno rješenje. Govorim jasno i bez nerazumljivih IT termina.",
+    description: "Javite se, objasnite problem, dogovorimo realno rješenje. Objašnjavam jednostavno, bez IT žargona.",
   },
   {
     emoji: "🛡️",
     title: "Iskrenost na prvom mjestu",
-    description: "Ako je uređaj prestari ili je popravak neisplativ, reći ću vam to otvoreno kako biste uštedjeli novac.",
+    description: "Ako problem nije isplativo rješavati, reći ću vam iskreno kako biste izbjegli nepotreban trošak.",
   },
 ];
 
